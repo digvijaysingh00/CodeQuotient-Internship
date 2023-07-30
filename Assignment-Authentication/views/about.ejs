@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Website</title>
+  <style>
+    /* Reset some default styles */
+    body, ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Page background and overall styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+    }
+
+    /* Navbar styles */
+    nav {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+    }
+
+    .navbar-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar-logo {
+      font-size: 24px;
+    }
+
+    .navbar-menu {
+      list-style: none;
+    }
+
+    .navbar-menu li {
+      display: inline-block;
+      margin-left: 20px;
+    }
+
+    .navbar-menu li:first-child {
+      margin-left: 0;
+    }
+
+    .navbar-menu li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .navbar-menu li a:hover {
+      background-color: #444;
+    }
+
+    .navbar-menu li a.active {
+      font-weight: bold;
+      background-color: #555;
+    }
+
+    /* Welcome message styles */
+    .about-content {
+      max-width: 800px;
+      margin: 50px auto;
+      text-align: center;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-content h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .about-content p {
+      font-size: 18px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="navbar-container">
+      <div class="navbar-logo">Authentication Demo</div>
+      <ul class="navbar-menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/about" class="active">About</a></li>
+        <li>Welcome <%= name %></li>
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content - Welcome Message -->
+  <div class="about-content">
+    <h1>Our Company</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Quisque eget felis ut ipsum accumsan laoreet. Fusce eu quam ut nisl suscipit scelerisque.</p>
+    <p>Mauris euismod semper lacus, eget euismod quam facilisis id. Sed facilisis nisi quis est blandit, in bibendum neque auctor.</p>
+    <p>Suspendisse potenti. Pellentesque consectetur, risus eu cursus interdum, enim eros dictum erat, sit amet accumsan arcu justo a erat.</p>
+    <p>Fusce eu justo in orci sodales auctor. Proin vel tellus eu eros ultricies suscipit nec nec nunc.</p>
+  </div>
+</body>
+</html>
