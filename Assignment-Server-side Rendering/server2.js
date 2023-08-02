@@ -6,7 +6,7 @@ function saveUser(user, callback) {
             return;
         }
         users[user.username] = user;
-        fs.writeFile("./lecture12/myDatabase.txt", JSON.stringify(users), function (err) {
+        fs.writeFile("./CodeQuotient-Internship/Assignment-Server-side Rendering/data.json", JSON.stringify(users), function (err) {
             callback(err);
         });
 
@@ -26,7 +26,7 @@ function searchUser(username, callback) {
     });
 }
 function readUsers(callback) {
-    fs.readFile("./lecture12/myDatabase.txt", "utf-8", function (err, data) {
+    fs.readFile("./CodeQuotient-Internship/Assignment-Server-side Rendering/data.json", "utf-8", function (err, data) {
         if (err) {
             callback(err);
             return;

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Website</title>
+  <style>
+    /* Reset some default styles */
+    body, ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Page background and overall styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+    }
+
+    /* Navbar styles */
+    
+    /* Welcome message styles */
+    .contact-content {
+      max-width: 800px;
+      margin: 50px auto;
+      text-align: center;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-content h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .contact-content p {
+      font-size: 18px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <%- include("components/header") %>
+
+
+  <!-- Main Content - Welcome Message -->
+  <div class="contact-content">
+    <p>If you have any questions or feedback, please don't hesitate to get in touch with us.</p>
+    <p>You can contact our support team at:</p>
+    <p>Email: support@example.com</p>
+    <p>Phone: +1 123-456-7890</p>
+    <p>We'll get back to you as soon as possible.</p>
+  </div>
+</body>
+</html>

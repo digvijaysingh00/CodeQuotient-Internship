@@ -1,0 +1,64 @@
+<style>
+  nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+
+  .navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar-logo {
+    font-size: 24px;
+  }
+
+  .navbar-menu {
+    list-style: none;
+  }
+
+  .navbar-menu li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+
+  .navbar-menu li:first-child {
+    margin-left: 0;
+  }
+
+  .navbar-menu li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+  .navbar-menu li a:hover {
+    background-color: #444;
+  }
+
+  .navbar-menu li a.active {
+    font-weight: bold;
+    background-color: #555;
+  }
+</style>
+
+
+<nav>
+  <div class="navbar-container">
+    <div class="navbar-logo">Authentication Demo</div>
+    <ul class="navbar-menu">
+      <li><a href="/">Home</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/others">Others</a></li>
+      <li>Welcome <%= name %>
+      </li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+  </div>
+</nav>

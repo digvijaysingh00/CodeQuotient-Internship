@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Website</title>
+  <style>
+    /* Reset some default styles */
+    body, ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Page background and overall styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+    }
+
+    /* Navbar styles */
+    
+
+    /* Welcome message styles */
+    .about-content {
+      max-width: 800px;
+      margin: 50px auto;
+      text-align: center;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-content h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .about-content p {
+      font-size: 18px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <%- include("components/header") %>
+
+  
+  <!-- Main Content - Welcome Message -->
+  <div class="about-content">
+    <h1>Our Company</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Quisque eget felis ut ipsum accumsan laoreet. Fusce eu quam ut nisl suscipit scelerisque.</p>
+    <p>Mauris euismod semper lacus, eget euismod quam facilisis id. Sed facilisis nisi quis est blandit, in bibendum neque auctor.</p>
+    <p>Suspendisse potenti. Pellentesque consectetur, risus eu cursus interdum, enim eros dictum erat, sit amet accumsan arcu justo a erat.</p>
+    <p>Fusce eu justo in orci sodales auctor. Proin vel tellus eu eros ultricies suscipit nec nec nunc.</p>
+  </div>
+</body>
+</html>

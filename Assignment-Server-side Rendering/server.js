@@ -45,7 +45,23 @@ app.get("/about", function (req, res) {
 });
 
 app.get("/signup", function (req, res) {
-    res.sendFile(__dirname + "/views/signup.html");
+    res.render("signup", {error:""});
+});
+app.get("/others", function (req, res) {
+    if (req.session.isLoggedIn === true) {
+        server2.readUsers(function (err, users) {
+            if (err) {
+                res.status(500).send(err);
+                return;
+            }
+            res.render("others", {name: req.session.name, users: users});
+            
+        });
+        
+    }
+    else {
+        res.redirect("/login");
+    }
 });
 
 app.post("/signup", function (req, res) {
@@ -66,7 +82,7 @@ app.post("/signup", function (req, res) {
             return;
         }
         if (exists) {
-            res.status(409).sendFile(__dirname + "/views/signup-failed.html");
+            res.status(409).render("signup", {error: "Username already exists"});
         }
         else {
 
@@ -103,14 +119,14 @@ app.post("/login", function (req, res) {
             });
         }
         else {
-            res.status(401).sendFile(__dirname + "/views/login-failed.html");
+            res.status(401).render("login", {error: "wrong username or password"});
         }
 
     });
 });
 
 app.get("/login", function (req, res) {
-    res.sendFile(__dirname + "/views/login.html");
+    res.render("login", {error:""});
 });
 
 app.get("/logout", function (req, res) {
@@ -123,6 +139,6 @@ app.get("/logout", function (req, res) {
 });
 
 app.listen(5000, function () {
-    console.log("Server is listening at port 8000...");
+    console.log("Server is listening at port 5000...");
 });
 
