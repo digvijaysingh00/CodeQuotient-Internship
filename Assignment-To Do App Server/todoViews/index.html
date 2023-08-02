@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo assignment</title>
+  <style>
+    /* Reset default margin and padding */
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Create a container with two columns */
+    .container {
+      display: flex;
+      height: 100%;
+    }
+
+    /* Define styles for the left column */
+
+    /* Define styles for the left column */
+    .left-column {
+      flex: 1;
+      background-color: #f0f0f0;
+      padding: 20px;
+      /* Add left and right padding as needed */
+    }
+
+
+    /* Define styles for the right column */
+    .right-column {
+      flex: 1;
+      padding: 20px;
+      background-color: #ffffff;
+      /* You can add other styles or child elements here */
+    }
+
+    /* Center the input and button within the right column */
+    .input-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    /* Style for the input field */
+    .input-field {
+      width: 80%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    /* Style for the submit button */
+    .submit-button {
+      width: 80%;
+      padding: 10px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    h2 {
+      font-weight: bold;
+      color: black;
+      text-align: center;
+      font-size: 30px;
+      /* You can adjust the font size as needed */
+    }
+
+    .bordered-label {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      width: 400px;
+    }
+
+    /* Styling for the checkbox */
+    .checkbox {
+      margin-left: auto;
+      /* Push the checkbox to the right */
+    }
+
+    /* Styling for the cross button */
+    .cross-button {
+      margin-left: 10px;
+      /* Add a little space between checkbox and cross button */
+      cursor: pointer;
+    }
+
+    /* Style the cross button appearance (using FontAwesome as an example) */
+    .cross-button::after {
+      content: '\2716';
+      /* Unicode for the cross symbol */
+    }
+
+
+    /* Style for the submit button on hover */
+    .submit-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+
+    <div class="left-column" id="left-column">
+      <div>
+        <h1>TASK LIST</h1>
+        <p> Add tasks to your list by typing to the right and pressing enter. You may then view pending tasks below.</p>
+      </div>
+      
+
+      
+
+    </div>
+
+
+    <div class="right-column">
+
+      <div class="input-container">
+        <input type="text" class="input-field" id="input-field" placeholder="Enter the todo task here">
+        <button class="submit-button" id="submit-button">Add</button>
+      </div>
+
+    </div>
+
+
+  </div>
+</body>
+<script src='clientScript.js'></script>
+
+</html>
